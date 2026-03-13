@@ -22,10 +22,7 @@ const app = express();
 //we can add the url that allowed to acess baceknd server
 const allowedOrigins = [
   "http://localhost:5173",
-  "http://localhost:5174",
-  "http://localhost:5175",
-  "http://localhost:5000",
-  "https://thumbnail-generator-omega-lilac.vercel.app/"
+    "https://thumbnail-generator-omega-lilac.vercel.app"
 
 ];
 
