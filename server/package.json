@@ -1,0 +1,44 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "tsx server.ts",
+    "server": "nodemon --exec tsx server.ts",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/genai": "^1.43.0",
+    "bcrypt": "^6.0.0",
+    "cloudinary": "^2.9.0",
+    "connect-mongo": "^6.0.0",
+    "connect-mongoose": "^0.0.2",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "formdata-node": "^6.0.3",
+    "mongoose": "^9.2.3",
+    "multer": "^2.1.1",
+    "node-fetch": "^3.3.2",
+    "openai": "^6.27.0",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/express-session": "^1.18.2",
+    "@types/multer": "^2.1.0",
+    "@types/node": "^25.3.2",
+    "nodemon": "^3.1.14",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
