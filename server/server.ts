@@ -17,6 +17,8 @@ declare module 'express-session'{
 }
 const app = express();
 
+app.set("trust proxy", 1);
+
 
 // Middleware
 //we can add the url that allowed to acess baceknd server
@@ -51,7 +53,11 @@ app.use("/uploads", express.static(join(__dirname, "../uploads")));app.use(sessi
     secret:process.env.SESSION_SECRET as string,
     resave:false,
     saveUninitialized:false,
-    cookie:{maxAge:1000*60*60*24*7},//7days expiry time
+    cookie:{
+  maxAge:1000*60*60*24*7,
+  secure:true,
+  sameSite:"none"
+},
     store:MongoStore.create({
         mongoUrl:process.env.MONGO_URL as string,
         collectionName:'sessions'
